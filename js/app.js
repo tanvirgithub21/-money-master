@@ -33,7 +33,7 @@ const displayContent = (text) => {
       //============================================================ Solved >>
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
-
+//============================================================== Monitoring Monitoring Monitoring >>
 const switchTab = (id) => {
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "grid";
@@ -46,6 +46,8 @@ const switchTab = (id) => {
 
         displayLikedPosts();
     } else {
+
+        document.getElementById("reported").innerHTML = "";//==================== Solved >>
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
@@ -159,10 +161,13 @@ const displayLikedPosts = () => {
     });
 };
 
-const displayReportedPosts = () => {
+const displayReportedPosts = () => {                         //==================== Working Now >>
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    
+    reportedPosts.forEach((post) => {
+
         const div = createPost(post);
+
         document.getElementById( "reported" ).appendChild(div);
     });
 };

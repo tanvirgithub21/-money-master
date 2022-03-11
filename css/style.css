@@ -35,7 +35,9 @@ textarea {
   --header-height: 44px;
   --nav-height: 44px;
 }
-
+.text-justify{
+  text-align: justify;
+}
 svg {
   display: block;
 }
@@ -111,7 +113,6 @@ img {
   border: none;
   cursor: pointer;
 }
-
 .post__content {
   display: flex;
   position: relative;
@@ -244,6 +245,12 @@ img {
 #reported{
   display: none;
 }
+
+/* Question section style  */
+
+
+
+
 
 @media only screen and (max-width: 992px) {
   #posts {
